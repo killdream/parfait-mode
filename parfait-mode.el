@@ -107,7 +107,7 @@ given as replacement."
   "Maps parts of the buffer to pretty symbols to remove visual clutter."
   :lighter " Parfait"
   (cond ((not parfait-mode)
-         (jit-lock-unregister 'parfait-unfontify)
+         (jit-lock-unregister 'parfait-fontify)
          (parfait-unfontify (point-min) (point-max)))
         (t
          (parfait-fontify (point-min) (point-max))
