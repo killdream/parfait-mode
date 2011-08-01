@@ -75,7 +75,7 @@ given as replacement."
 (defun parfait-replace-match (symbol current-overlay)
   "Replaces the matched symbol."
   (unless (and current-overlay
-               (eq (overlay-get overlay 'type) 'parfait-symbol))
+               (eq (overlay-get current-overlay 'type) 'parfait-symbol))
     (let ((overlay (make-overlay (match-beginning 0) (match-end 0))))
       (overlay-put overlay 'type 'parfait-symbol)
       (overlay-put overlay 'evaporate t)
