@@ -1,4 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; parfait-mode.el --- prettifies your code by removing needless clutter
 ;;
 ;; Copyright (c) 2011 Quildreen Motta
