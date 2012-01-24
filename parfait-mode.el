@@ -75,10 +75,12 @@ given as replacement."
   "Replaces the matched symbol."
   (unless (and current-overlay
                (eq (overlay-get current-overlay 'type) 'parfait-symbol))
-    (let ((overlay (make-overlay (match-beginning 0) (match-end 0))))
+    (let ((overlay (make-overlay (match-beginning 0) (match-end 0)))
+          (replacement (if (functionp symbol) (funcall symbol)
+                         symbol)))
       (overlay-put overlay 'type 'parfait-symbol)
       (overlay-put overlay 'evaporate t)
-      (overlay-put overlay 'display symbol))))
+      (overlay-put overlay 'display replacement))))
 
 
 (defun parfait-fontify (start end)
